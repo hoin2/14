@@ -3,7 +3,7 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(void) {
+void main(void) {
 	char*pc = NULL;
 	int i = 0;
 	
