@@ -11,7 +11,7 @@ struct Book{
 void main(void) {
 	struct Book*p;
 	
-	p = (int*)malloc(2*sizeof(int));
+	p = (struct Book*)malloc(2*sizeof(struct Book));
 	
 	if(p == NULL)
 	{
