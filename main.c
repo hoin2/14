@@ -3,29 +3,29 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
+struct Book{
+	int number;
+	char title[10];
+};
+
 void main(void) {
-	char*pc = NULL;
-	int i = 0;
+	struct Book*p;
 	
-	pc = (char*)malloc(100*sizeof(char));
+	p = (int*)malloc(2*sizeof(int));
 	
-	if(pc == NULL)
+	if(p == NULL)
 	{
-		printf("메모리 할당 오류\n");
-		
-		exit(1);
+		printf("error\n");
+		return -1;
 	}
 	
-	for(i=0;i<26;i++)
-	{
-	pc[i] = 'a'+i;		
-	}
+	p->number = 1;
+	strcpy(p->title, "C Programming");
 	
-	pc[i] = 0;
-	
-	printf("%s\n", pc);
-	
-	free(pc);
+	(p+1)->number = 2;
+	strcpy((p+1)->title, "Electronics");
+
+	free(p);	
 	
 	return 0;
 }
